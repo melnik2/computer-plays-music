@@ -11,7 +11,6 @@
 #include <windows.h>
 #include <locale.h>
 #include <MMSystem.h>
-//#include <cctype>
 #include <sstream>
 
 
@@ -38,7 +37,6 @@ printf("input file.txt\n");
 getline(cin,filen);
 AnsiString FileName1=GetCurrentDir()+"\\note\\"+filen.c_str()+".txt";
 fp1=fopen(FileName1.c_str(),"r");
-//fp1=fopen("t0.txt","r");
 if((fp1)!=NULL) {
 printf("File - OK \n\n\n");
   }
@@ -74,13 +72,6 @@ delete [] fp2;
 
 filen.clear();
 
-
-/* sformirovannai matrix char
-for(int i=0; i<cn2; i++){
-cout<<arrstr1[i]<<" ";
-}
-*/
-
 int num1,num2;
 int * arrnum = new int [cn2];
 stringstream cs;
@@ -95,12 +86,6 @@ arrnum[i]=num2;
 cs.clear();
 }
 
-/* sformirovannai matrix identificaci (int) kajdogo char
-for(int i=0; i<cn2; i++){
-cout<<arrnum[i]<<endl;
-}
-*/
-
 int* arrnm1 = new int[cn2];
 float* arrnm2 = new float[cn2];
 float* arrnm3 = new float[cn2];
@@ -110,13 +95,6 @@ func1(arrnum[i]);
 arrnm1[i]=m;
 arrnm2[i]=n1;
 }
-
-
-/* sformirovannai matrix nomera fila
-for(int i=0; i<cn2; i++){
-cout<<arrnm1[i]<<" "<<arrnm2[i]<<endl;
-}
-*/
 
 float n2;
 
@@ -140,21 +118,7 @@ if(x1>10)cout<<endl<<endl,x1=1;
 printf("%s\t",arrstr1[i]);
 x1++;
 }
-//delete [] arrstr1;
-
-
-/* sformirovannai matrix posicia not dla intervala
-int x3=1;
-cout<<endl<<endl<<endl;
-for(int i=0; i<cn2; i++){
-if (x3>10)cout<<endl<<endl, x3=1;
-cout<<arrnm2[i]<<"\t";
-x3++;
-}
-cout<<endl<<endl;
-*/
-
-/* sformirovannai matrix Interval not */
+  
 int x4=1;
 cout<<endl<<endl<<endl<<"----------------------------------"<<endl<<endl;
 for(int i=0; i<cn2; i++){
@@ -198,12 +162,6 @@ delete [] mk2;
 delete [] buf;
 delete [] mc4;
 
-/* sformirovannai matrix nazvania muzfilov
-for(int i=0; i<cn2; i++){
-cout<<arrstr2[i]<<endl;
-}
-*/
-
 int x2;
 if(cn2<11)cn2--;
 do{
@@ -232,15 +190,11 @@ cn1=0;
 cn2=0;
 
 cin.sync();
- //system("cls");
 
 } while (q2==1);
 
- //system("PAUSE");
  return 0;
 }
-
-
 
 func1 (int numid){
 switch (numid){
