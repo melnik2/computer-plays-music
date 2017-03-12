@@ -11,7 +11,6 @@
 #include <windows.h>
 #include <locale.h>
 #include <MMSystem.h>
-//#include <cctype>
 #include <sstream>
 #include <math.h>
 
@@ -27,7 +26,6 @@ int m;
 float n1;
 string xtr1;
 
-
 int main(int argc, char *argv[]) {
 
 printf("Google+ http://plus.google.com/107022365509369805155\temail: haxi@mail.ru\n\n");
@@ -38,10 +36,10 @@ do{
 
 printf("input file.txt\n");
 
-scanf("%s",filen); //getline(cin,filen);
+scanf("%s",filen);
 AnsiString FileName1=GetCurrentDir()+"\\note\\"+filen.c_str()+".txt";
 fp1=fopen(FileName1.c_str(),"r");
-//fp1=fopen("t0.txt","r");
+  
 if((fp1)!=NULL) {
 printf("File - OK \n\n");
   }
@@ -61,7 +59,7 @@ int x1=0;
 
 
 fp2=fopen(FileName1.c_str(),"r");
-//fp2=fopen("t0.txt","r");
+
 while((pen1=fgetc(fp2))!= EOF) {
 mt1[x1]=pen1;
 x1++;
@@ -76,7 +74,6 @@ float* arr1 = new float[cn2+1];
 string st1,st3;
 st3="";
 
-
 for(int i=0; i<cn1; i++){
 if(mt1[i]!='\t' && mt1[i]!='\n'){
 st1=mt1[i];
@@ -85,7 +82,7 @@ if (st1=="X")st1="100";
 st3=st3+st1;
 }
 else{
-arr1[x1]=atof(st3.c_str());   //str->float  "," no read - right "."
+arr1[x1]=atof(st3.c_str());
 cout<<arr1[x1]<<"\t";
 x1++;
 st3="";
@@ -99,7 +96,7 @@ do{
 printf("\n\nfirst note: ");
 
 char ch1[]="";
-scanf("%s",ch1);  //gets(ch1);     gets - gluboko v pamiati
+scanf("%s",ch1);
 
 int num1,num2;
 stringstream cs;
@@ -124,13 +121,6 @@ else arr2[i]=0,arr2[i+1]=arr2[i-1]+arr1[i+1],i++;
 }
 printf("\n");
 
-/*
-for(int i=0; i<cn2; i++){
-cout<<arr2[i]<<"\t";
-}
-cout<<endl<<endl;
-*/
-
 int* arrnm1 = new int[cn2];
 
 for(int i=0; i<cn2; i++){
@@ -142,12 +132,6 @@ cout<<xtr1<<"\t";
 delete [] arr2;
 
 printf("\n\n");
-
-/*
-for(int i=0; i<cn2; i++){
-cout<<arrnm1[i]<<"\t";
-}
-*/
 
     char* mk1 = new char[10];
     char* mk2 = new char[6];
@@ -175,18 +159,6 @@ for(int j=0; j<16; j++){
 }
 
 delete [] arrnm1;
-/*
-delete [] mk1;
-delete [] mk2;
-delete [] mc4;
-delete [] buf;
-*/
-
-/*
-for(int i=0; i<cn2; i++){
-cout<<arrstr2[i]<<endl;
-}
-*/
 
 int q2;
 
@@ -216,10 +188,7 @@ printf("Select melody-1or0 ");
 scanf("%d",&q3);
 }while (q3==1);
 
-
- //system("PAUSE");
  return 0;
-
 }
 
 
@@ -361,7 +330,6 @@ break;
 default:
 break;
 }
- //return m;
  }
 
  func2 (int numit){
@@ -469,5 +437,4 @@ break;
 default:
 break;
 }
- //return m;
  }
